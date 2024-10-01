@@ -1,11 +1,11 @@
 Cordova Electron dialogs fix
 ===
 
-Electron has a bug (see https://github.com/electron/electron/issues/41603) that breaks focus when using alert(), confirm() or prompt() functions.
+Electron has a known bug (see https://github.com/electron/electron/issues/31917 and https://github.com/electron/electron/issues/41603) that disrupts focus when using the `alert()` or `confirm()` functions.
 
-This Cordova plugin fixes this by overriding these functions in order to call the main context methods blur() and focus() of the BrowserWindow after the dialogs are closed.
+This Cordova plugin resolves the issue by overriding these functions and subsequently calling the `blur()` and `focus()` methods of the `BrowserWindow` in the main context once the dialogs are closed.
 
-This plugin works out of the box and is compatible with other platforms (but it does nothing), just install it if you use native JavaScript dialogs in your Cordova Electron app, and you noticed focus issues.
+This plugin works out of the box and is compatible with other platforms, though it does nothing on iOS or Android. Just install it if you use native JavaScript dialogs in your Cordova Electron app, and you noticed focus issues.
 
 Installation
 ---

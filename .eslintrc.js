@@ -14,7 +14,7 @@ module.exports                      = {
     "comma-style": ["error", "last"],
     "no-eval": ["error", {"allowIndirect": false}],
     "no-redeclare": "off",
-    "no-console": "warn",
+    "no-console": "error",
 
     "curly": "error",
     "brace-style": ["error", "1tbs"],

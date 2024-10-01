@@ -12,7 +12,6 @@
    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
    See the License for the specific language governing permissions and
    limitations under the License.
-
 */
 
 const { BrowserWindow } = require('electron');
@@ -23,9 +22,9 @@ module.exports = {
     if (w) {
       w.blur();
       w.focus();
-      console.log('refocused');
+      // console.log('refocused');
     } else {
-      console.log("BrowserWindow.getFocusedWindow() returned null");
+      console.log("BrowserWindow.getFocusedWindow() returned null"); // eslint-disable-line no-console
     }
   }
 }

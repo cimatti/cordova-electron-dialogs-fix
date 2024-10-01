@@ -1,7 +1,7 @@
 {
   "name": "cordova-electron-dialogs-fix",
-  "version": "0.1.0",
-  "description": "Fix focus issue when alert(), confirm() or prompt() are called in a Cordova Electron app",
+  "version": "0.1.1",
+  "description": "Fix focus issue when alert() or confirm() are called in a Cordova Electron app",
   "cordova": {
     "id": "cordova-electron-dialogs-fix",
     "platforms": [
@@ -18,7 +18,6 @@
     "cordova-electron",
     "alert",
     "confirm",
-    "prompt",
     "focus",
     "input"
   ],

@@ -12,20 +12,20 @@
    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
    See the License for the specific language governing permissions and
    limitations under the License.
-
 */
 
 {
-  // Store reference to original alert, confirm and prompt functions
-  const originals = {alert, confirm, prompt};
+  // Store reference to the original alert() and confirm()
+  // prompt() is not supported by Electron, so let's ignore it
+  const originals = {alert, confirm};
 
   // Returns a function that calls the original function and then executes the refocus on the main process
   const altFuncBuilder = function(fname){
     const f = originals[fname]; //this is necessary, because if we call originals[fname](...args), the function will be called in "originals" context and not in "window" context
     return function(...args) {
-      console.log(`alternative ${fname} called`);
+      // console.log(`alternative ${fname} called`);
       const ret = f(...args);
-      console.log(ret);
+      // console.log(ret);
       Cordova.exec(()=>{}, ()=>{}, "cordovaElectronDialogsFix", "refocus", []);
       return ret;
     }
