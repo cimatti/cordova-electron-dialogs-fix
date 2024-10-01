@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+The MIT License (MIT)
+Copyright (c) 2024 Andrea Cimatti - https://www.cimatti.it
+See a full copy of license in the root folder of the project 
+-->
+
+<plugin 
+    xmlns="http://apache.org/cordova/ns/plugins/1.0"
+    id="cordova-electron-dialogs-fix"
+    version="1.0.0">
+
+    <name>Cordova Electron dialogs fix</name>
+    <description>Fix focus issue when alert(), confirm() or prompt() are called in a Cordova Electron app</description>
+    <author>Andrea Cimatti - https://www.cimatti.it</author>
+    <license>MIT</license>    
+    <keywords>cordova,electron,alert,confirm,prompt,focus,input</keywords>
+    <repo>https://github.com/cimatti/cordova-electron-dialogs-fix</repo>
+    <issue>https://github.com/cimatti/cordova-electron-dialogs-fix/issues</issue>
+
+    <engines>
+        <engine name="cordova-electron" version=">=3.0.0" />
+    </engines>
+
+    <platform name="electron">
+        <js-module src="www/cordova-electron-dialogs-fix.js" name="cordova_electron_dialogs_fix">
+            <runs />
+        </js-module>
+        <framework src="src/electron" />
+    </platform>
+</plugin>

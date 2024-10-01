@@ -1,0 +1,19 @@
+{
+  "name": "cordova-electron-dialogs-fix-electron",
+  "version": "0.0.0",
+  "description": "Code that will run in Electron main process context",
+  "main": "index.js",
+  "keywords": [
+    "cordova",
+    "electron",
+    "device",
+    "native"
+  ],
+  "author": "Cimatti Consulting (https://www.cimatti.it/)",
+  "license": "Apache-2.0",
+  "dependencies": {
+  },
+  "cordova": {
+    "serviceName": "cordovaElectronDialogsFix"
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "name": "cordova-electron-dialogs-fix",
+  "version": "0.1.0",
+  "description": "Fix focus issue when alert(), confirm() or prompt() are called in a Cordova Electron app",
+  "cordova": {
+    "id": "cordova-electron-dialogs-fix",
+    "platforms": [
+      "electron"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cimatti/cordova-electron-dialogs-fix.git"
+  },
+  "keywords": [
+    "cordova",
+    "ecosystem:cordova",
+    "cordova-electron",
+    "alert",
+    "confirm",
+    "prompt",
+    "focus",
+    "input"
+  ],
+  "scripts": {
+    "jslint": "eslint ./www/ ./src/electron/"
+  },
+  "engines": {
+    "cordovaDependencies": {
+      "0.1.0": {
+        "cordova-electron": ">=3.0.0"
+      }
+    }
+  },
+  "author": "Andrea Cimatti (https://www.cimatti.it/)",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/cimatti/cordova-electron-dialogs-fix/issues"
+  },
+  "homepage": "https://github.com/cimatti/cordova-electron-dialogs-fix#readme",
+  "devDependencies": {
+    "eslint": "^8.57.0",
+    "husky": "^4.2.5"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run jslint"
+    }
+  }
+}
